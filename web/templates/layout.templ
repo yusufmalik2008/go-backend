@@ -1,0 +1,35 @@
+// web/templates/layout.templ
+package main
+
+templ Layout(title string, user string) {
+	<!DOCTYPE html>
+	<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>{ title } - TaskFlow</title>
+		<link href="/static/css/tailwind.css" rel="stylesheet"/>
+		<script src="https://unpkg.com/htmx.org@1.9.12"></script>
+		<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+	</head>
+	<body class="bg-base-200 min-h-screen">
+		<nav class="navbar bg-base-100 shadow-xl">
+			<div class="flex-1">
+				<a href="/" class="btn btn-ghost text-xl">TaskFlow</a>
+			</div>
+			if user != "" {
+				<div class="flex-none">
+					<div class="dropdown dropdown-end">
+						<label tabindex="0" class="btn btn-ghost">{ user }</label>
+						<ul class="menu dropdown-content z-10 p-2 shadow bg-base-100 rounded-box w-52">
+							<li><a href="/logout">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			}
+		</nav>
+		<div class="container mx-auto p-6">
+			{ children... }
+		</div>
+	</body>
+	</html>
+}
