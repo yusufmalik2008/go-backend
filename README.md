@@ -1,7 +1,4 @@
-#Here’s a **professional, complete README.md** you can copy-paste directly into your repo (replace the current tiny one).
-
-Just open `README.md` in your editor (or create a new one), paste this entire thing, save, commit and push — done!
-
+#
 ```markdown
 # TaskFlow Go – Full-Stack Task Management App
 
