@@ -1,6 +1,10 @@
+NOTES : 
+This is just for a practice SWE Project!!!!
+
 #
 ```markdown
 # TaskFlow Go – Full-Stack Task Management App
+
 
 A modern, performant task management application built with **Go** on the backend and **React + TypeScript + TailwindCSS** on the frontend. Fully containerized with Docker.
 
